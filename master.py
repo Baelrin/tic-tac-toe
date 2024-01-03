@@ -21,7 +21,7 @@ def game_step():
 
 
 def check_win():
-    pass
+    return False
 
 
 def start_game():
@@ -31,7 +31,7 @@ def start_game():
     step = 1
     draw_board()
 
-    while True and (step < 10):
+    while True and (step < 10) and (check_win() == False):
         index = input(
             (
                 "Current player => "
