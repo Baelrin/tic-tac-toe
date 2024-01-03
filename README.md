@@ -5,17 +5,17 @@ This is a command-line implementation of the classic tic-tac-toe game. Players t
 ## Installation
 
 Clone the repository:
-`bash git clone https://github.com/Baelrin/tic-tac-toe.git`
+```bash git clone https://github.com/Baelrin/tic-tac-toe.git```
 
 
 Navigate to the project directory:
 
-`bash cd tic-tac-toe`
+```bash cd tic-tac-toe```
 
 
 Run the game:
 
-`bash python master.py`
+```bash python master.py```
 
 
 ## Usage
