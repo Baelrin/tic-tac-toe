@@ -15,9 +15,12 @@ def draw_board():
     pass
 
 
-def game_step():
+def game_step(index, char):
     """Perform a move"""
-    pass
+    if (index > 9 or index < 1 or board[index - 1] in ('X', 'O')):
+        return False
+    board[index - 1] = char
+    return True
 
 
 def check_win():
@@ -39,10 +42,19 @@ def start_game():
                 + ". Enter the field number (0 - exit):"
             )
         )
-        if index.isdigit():
-            step += 1
+        if int(index) == 0:
+            break
+        elif index.isdigit():
+            # If move was successful
+            if (game_step(int(index), current_player)):
+                print('Successful move')
+                draw_board()
+                # Increase the step number
+                step += 1
+            else:
+                print('Wrong number, try again!')
         else:
-            print("Invalid input. Please enter the field number.")
+            print("Invalid input. Please enter the field number (1-9).")
 
 
 print("Добро пожаловать в Крестики-нолики!")
