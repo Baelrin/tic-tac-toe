@@ -1,31 +1,28 @@
-# Tic-Tac-Toe Game
+# Tic Tac Toe Game
 
-This is a command-line implementation of the classic tic-tac-toe game. Players take turns entering the number of the cell they wish to mark, and the game checks if there is a winner after each move.
+This is a simple implementation of the classic game Tic Tac Toe. The game board is represented as a list of integers from 1 to 9, and the game is played between two players who take turns entering numbers to mark spots on the board.
 
-## Installation
+## Features
 
-Clone the repository:
-```bash git clone https://github.com/Baelrin/tic-tac-toe.git```
-
-
-Navigate to the project directory:
-
-```bash cd tic-tac-toe```
-
-
-Run the game:
-
-```bash python master.py```
-
+- Draws the game board.
+- Performs a move.
+- Checks for a winner.
+- Starts the game.
 
 ## Usage
 
-Players take turns entering the number of the cell they wish to mark. The game checks if there is a winner after each move.
+To play the game, run the Python script. The game will then prompt you to enter the number corresponding to the spot you want to mark on the board. If the move is valid, the game board will be updated and it will switch to the other player. The game continues until a player wins or the board is full.
 
-## Contributing
+## Installation
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+No installation is required as this is a Python script. Just ensure you have Python installed on your system.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is licensed under the MIT License.
+
+## Contact
+
+For any questions or issues, feel free to reach out to the maintainer.
+
+---
