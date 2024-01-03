@@ -30,11 +30,13 @@ def check_win():
 def start_game():
     # Current Player
     current_player = "X"
-    # Step Number
-    step = 1
+    # Other Player
+    other_player = "O"
+    # Move Number
+    move_number = 1
     draw_board()
 
-    while True and (step < 10) and (check_win() == False):
+    while True and (move_number < 10) and (check_win() == False):
         index = input(
             (
                 "Current player => "
@@ -49,8 +51,9 @@ def start_game():
             if (game_step(int(index), current_player)):
                 print('Successful move')
                 draw_board()
-                # Increase the step number
-                step += 1
+                # Switch players
+                current_player, other_player = other_player, current_player
+                move_number += 1
             else:
                 print('Wrong number, try again!')
         else:
