@@ -91,24 +91,24 @@ def start_game(mode):
     ai_player = 'O'
     step = 1
     draw_board()
-    while (step < 9) and (check_win(board) == False):
+    while step < 9 and not check_win(board):
         index = input('Moves ' + current_player +
                       '. Enter field number (0 - exit):')
-        if (int(index) == 0):
+        if int(index) == 0:
             break
-        if (game_step(int(index), current_player)):
+        if game_step(int(index), current_player):
             print('Successful move')
             current_player = next_player(current_player)
             step += 1
-            if (mode == MODE_HUMAN_VS_AI):
-                if (computer_step('X', 'O') != False):
+            if mode == MODE_HUMAN_VS_AI:
+                if computer_step('X', 'O') != False:
                     board[computer_step('X', 'O')] = ai_player
                     current_player = next_player(current_player)
                     step += 1
             draw_board()
         else:
             print('Wrong number! Repeat!')
-    if (step > 8):
+    if step > 8:
         print('The game is over. Draw!')
     elif check_win(board):
         print('Won ' + str(check_win(board)))
