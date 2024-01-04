@@ -78,9 +78,8 @@ def next_player(current_player):
     Determine the next move's player:
     This function changes the current player based on the last player who made the move.
     '''
-    if (current_player == 'X'):
-        return 'O'
-    return 'X'
+    player_switch = {'X': 'O', 'O': 'X'}
+    return player_switch[current_player]
 
 
 def start_game(mode):
